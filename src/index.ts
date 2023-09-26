@@ -15,5 +15,11 @@ transformButton.addEventListener("click", (event) => {
 
 let outputElement = document.getElementById("output") as HTMLTextAreaElement;
 outputElement.addEventListener("click", (event) => {
-  navigator.clipboard.writeText(outputElement.value).then(()=>alert("Copied!")).catch((error) => alert("Error: "+error));
+  let data = outputElement.value;
+  if (data){
+    navigator.clipboard.writeText(data)
+      .then(()=>alert("Copied!"))
+      .catch((error) => alert("Error: "+error));
+  }
+  
 });
