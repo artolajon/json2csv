@@ -25,6 +25,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "favicons-webpack-plugin": "^6.0.1",
     "papaparse": "^5.4.1"
   }
 }
