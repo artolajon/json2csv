@@ -1,7 +1,7 @@
 import './style.scss';
 import { json2csv } from 'json-2-csv';
 
-let transformButton = document.getElementById("transform");
+let transformButton = document.getElementById("transform") as HTMLButtonElement;
 transformButton.addEventListener("click", (event) => {
 
   let inputArea: HTMLTextAreaElement = document.getElementById("input") as HTMLTextAreaElement;
@@ -22,4 +22,11 @@ outputElement.addEventListener("click", (event) => {
       .catch((error) => alert("Error: "+error));
   }
   
+});
+
+
+let resetButton = document.getElementById("reset") as HTMLButtonElement;
+resetButton.addEventListener("click", (event) => {
+  (document.getElementById("input") as HTMLTextAreaElement).value = "";
+  (document.getElementById("output") as HTMLTextAreaElement).value = "";
 });

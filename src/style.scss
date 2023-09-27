@@ -19,7 +19,7 @@ h1{
     text-align: center;
 }
 
-div{
+main{
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -32,6 +32,18 @@ div{
         justify-content: start;
     }
 }
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    @media screen and (max-width: 800px) {
+        flex-direction: row;
+    }
+}
+
+
 textarea{
     width: 100%;
 }
